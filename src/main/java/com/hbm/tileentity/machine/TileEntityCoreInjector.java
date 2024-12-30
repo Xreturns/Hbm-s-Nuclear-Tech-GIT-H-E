@@ -97,7 +97,19 @@ public class TileEntityCoreInjector extends TileEntityMachineBase implements IFl
 				if(!worldObj.getBlock(x, y, z).isAir(worldObj, x, y, z))
 					break;
 			}
-			
+
+			double blx = Math.min(xCoord, xCoord + dir.offsetX * beam) + 0.2;
+					double bux = Math.max(xCoord, xCoord + dir.offsetX * beam) + 0.8;
+					double bly = Math.min(yCoord, yCoord + dir.offsetY * beam) + 0.2;
+					double buy = Math.max(yCoord, yCoord + dir.offsetY * beam) + 0.8;
+					double blz = Math.min(zCoord, zCoord + dir.offsetZ * beam) + 0.2;
+					double buz = Math.max(zCoord, zCoord + dir.offsetZ * beam) + 0.8;
+					
+					List<Entity> list = worldObj.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.getBoundingBox(blx, bly, blz, bux, buy, buz));
+					
+					for(Entity e : list) {
+						e.attackEntityFrom(ModDamageSource.amsInject, 5000);
+					}
 			this.markDirty();
 
 			NBTTagCompound data = new NBTTagCompound();
