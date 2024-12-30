@@ -907,6 +907,7 @@ death.attack.acid=%1$s fell into acid.
 death.attack.acidPlayer=%1$s was dissolved by %2$s.
 death.attack.ams=%1$s was bathed in deadly particles that have yet to be named by human science.
 death.attack.amsCore=%1$s was vaporized in the fire of a singularity.
+death.attack.amsInject=%1$s's cells were doped with high-speed fuel particles.
 death.attack.asbestos=%1$s is now entitled to financial compensation.
 death.attack.bang=%1$s was blasted into bite-sized pieces.
 death.attack.blackhole=%1$s was spaghettified.
